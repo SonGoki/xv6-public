@@ -532,3 +532,10 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+int
+memory(int virtual)
+{
+	int fisica = virtual+98766;
+	return fisica;
+}

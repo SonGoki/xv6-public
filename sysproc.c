@@ -77,6 +77,16 @@ sys_sleep(void)
   return 0;
 }
 
+int
+sys_memory(void)
+{
+  int virtual;
+
+  if(argint(0, &virtual) < 0)
+    return -1;
+  return memory(virtual);
+}
+
 // return how many clock tick interrupts have occurred
 // since start.
 int
